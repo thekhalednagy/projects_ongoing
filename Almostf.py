@@ -24,43 +24,36 @@ DAY_DATA = ['all', 'monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'sund
 
 
 def city_input():
-    '''
-    This function starts the user interface by introduction and
-    asking the user with the city he/she wants to analyze
-    '''
-    print('Hello! I am Suman Kumar Subudhi! Let\'s explore some US bikeshare data!')
+    
+    print('this is a semi interactive bikeshare data for 3 US cities')
+    
+print(' ')
+    print('Which city to analyze the data for ?')
+    print('Chicago or 1 or C ')
+    print('New York or 2 or N')
+    print('Washington or 3 or W')
     print(' ')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    print('Enter the city you want to analyze the data for:')
-    print('Chicago: 1')
-    print('New York: 2')
-    print('Washington: 3')
-    print(' ')
-    city = input('Please choose the city for which you would like to see the Statistics: ')
+    city = (' choose one: ')
     city = city.lower()
-    while True:     # for handling the unexpected input by user
-            if city == '1' or city == 'chicago':
-                print("\nChicago City! Okay Let's go further\n")
+    while True:     
+            if city == '1' or city == 'chicago' or city == 'c':
+                print("\nChicago is selected\n")
                 return 'chicago'
-            if city == '2' or city == 'new york':
-                print("\nNew York City! Okay let's go further\n")
+            if city == '2' or city == 'new york' or city == 'n':
+                print("\nNew York City is selected\n")
                 return 'new york city'
-            elif city == '3' or city == 'washington':
-                print("\nWashington! Okay let's go further\n")
+            elif city == '3' or city == 'washington' or city == 'w':
+                print("\nWashington selected\n")
                 return 'washington'
-            # error handled by implementing 'else' and provided another option to input data
             else:
-                print('\nPlease enter 1, 2 or 3 or the names of cities\n')
-                city = input('Please choose the city for which you would like to see the Statistics: ')
+                print('\nPlease enter  1, 2 , 3 or the names of city or its abriviation\n')
+                city = input('Please choose the city: ')
                 city = city.lower()
     return city
 
 def get_time():
-    '''
-    the code below asks the user to choose between month and day of month,
-    day of the week or no filters
-    '''
-    period = input('\nYou want to filter the data by month and day of the month, day of the week, or you do not want to filter at all? Type "no" for no period filter.\n')
+Print (' type month , day , or no fir filters')
+    period = input('\nfilter data by month and day of the month, day of the week, or you do not want to filters at all? Type "no" for no period filter.\n')
     period = period.lower()
 
     while True: 
